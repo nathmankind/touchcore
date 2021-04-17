@@ -1,0 +1,61 @@
+@import "../../_components/Basestyles/variables.scss";
+
+.registerFormWrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 3px -5px 40px rgba(205, 205, 212, 0.1);
+  h2 {
+    font-size: 28px;
+  }
+
+  form {
+    margin-top: 32px;
+  }
+  .anchorText {
+    color: $primary-btn-color !important;
+    position: relative;
+    padding: 0;
+  }
+  .formFooter {
+    @include flexbox();
+    justify-content: space-between;
+    margin: 40px 0;
+    p {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  span {
+    padding: 10px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0.5;
+  }
+}
+
+label {
+  margin: 12px 0 0 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid #e2e2ea;
+}
+
+input:focus + span,
+input:not(:placeholder-shown) + span {
+  opacity: 1;
+  margin-left: 8px;
+  transform: scale(0.75) translateY(-100%) translateX(-30px);
+}

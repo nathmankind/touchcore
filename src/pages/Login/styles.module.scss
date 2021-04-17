@@ -1,0 +1,45 @@
+@import "../../_components/Basestyles/variables.scss";
+
+.loginFormWrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 3px -5px 40px rgba(205, 205, 212, 0.1);
+  h2 {
+    font-size: 28px;
+  }
+
+  form {
+    margin-top: 32px;
+  }
+  .anchorText {
+    color: $anchorTagColor;
+    position: relative;
+    padding: 0;
+  }
+  .formFooter {
+    @include flexbox();
+    justify-content: space-between;
+    margin: 40px 0;
+    p {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  .forgetPassword {
+    @include flexbox();
+    justify-content: flex-end;
+    color: $primary-btn-color;
+  }
+  span {
+    padding: 10px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0.5;
+  }
+}

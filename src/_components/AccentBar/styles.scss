@@ -1,0 +1,11 @@
+@import "../Basestyles/variables.scss";
+
+.accentBarWrapper {
+  margin: 22px 0;
+  .progress {
+    height: 0.45rem;
+  }
+  .progress-bar {
+    background-color: $primary-btn-color;
+  }
+}

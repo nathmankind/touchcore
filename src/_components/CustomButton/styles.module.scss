@@ -1,0 +1,9 @@
+@import "../Basestyles/variables.scss";
+
+.CustomButton {
+  border-radius: 10px;
+  background: $primary-btn-color;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+}

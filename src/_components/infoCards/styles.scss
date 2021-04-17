@@ -1,0 +1,35 @@
+@import "../Basestyles/variables.scss";
+
+.exchangeCard {
+  @include flexbox();
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin: 12px 0;
+  .left-col {
+    width: 60%;
+  }
+  .right-col {
+    width: 40%;
+    div {
+      float: right;
+    }
+  }
+  .header {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .cardNumber {
+    @include flexbox();
+    .graph-container {
+      svg {
+        .axes {
+          display: none;
+        }
+      }
+    }
+    h1 {
+      color: #ff3a29;
+    }
+  }
+}
