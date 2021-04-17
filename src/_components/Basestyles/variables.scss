@@ -1,6 +1,9 @@
 $primary-btn-color: #053582;
 $anchorTagColor: #053582;
 $dashboard-bg-color: #e5eff4;
+$grey: #92929d;
+$purple: #4339f2;
+$red: #ff3a29;
 
 @mixin flexbox() {
   display: -webkit-box;
@@ -8,4 +11,11 @@ $dashboard-bg-color: #e5eff4;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+}
+
+@mixin cardStyles() {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 12px 0;
 }

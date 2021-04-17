@@ -1,23 +1,35 @@
 @import "../Basestyles/variables.scss";
 
 .exchangeCard {
-  @include flexbox();
-  background: white;
-  padding: 24px;
-  border-radius: 12px;
-  margin: 12px 0;
-  .left-col {
-    width: 60%;
+  @include cardStyles();
+
+  .first-row,
+  .second-row {
+    @include flexbox();
+    justify-content: space-between;
+  }
+  .second-row {
+    margin-top: 20px;
   }
   .right-col {
-    width: 40%;
+    width: 30%;
     div {
       float: right;
     }
   }
   .header {
-    font-weight: 700;
-    font-size: 20px;
+    h4 {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+  .today {
+    @include flexbox();
+    p,
+    svg {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
   .cardNumber {
     @include flexbox();
@@ -30,6 +42,8 @@
     }
     h1 {
       color: #ff3a29;
+      font-size: 32px;
+      font-weight: bold;
     }
   }
 }

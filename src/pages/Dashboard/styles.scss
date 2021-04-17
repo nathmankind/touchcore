@@ -269,7 +269,7 @@ body.fixed-nav {
 
 @media (min-width: 992px) {
   #mainNav.fixed-top .navbar-sidenav {
-    height: calc(100vh - 112px);
+    height: 100vh;
   }
   #mainNav.fixed-top .sidenav-toggler {
     position: absolute;
@@ -657,8 +657,98 @@ footer.sticky-footer {
 }
 
 .dashboard-col-2-card {
-  background: white;
-  padding: 24px;
-  border-radius: 12px;
-  margin: 12px 0;
+  @include cardStyles();
+  .percentage {
+    color: $red;
+  }
+  img {
+    margin: 16px 0;
+  }
+  .graph {
+    .graph-container {
+      svg {
+        .axes {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.dashboard-card-bottom-3-col {
+  @include cardStyles();
+  .small,
+  p {
+    font-size: 12px;
+    color: $grey;
+  }
+  .headder,
+  .bottom-content {
+    @include flexbox();
+    justify-content: space-between;
+  }
+  h5 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .bottom-content {
+    margin-top: 12px;
+  }
+  .first-col {
+    width: 50%;
+    .div-container {
+      .number-danger {
+        color: red;
+      }
+      .number-purple {
+        color: $purple;
+      }
+    }
+  }
+
+  .second-col {
+    width: 50%;
+    .content {
+      .graph {
+        .graph-container {
+          svg {
+            .axes {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .color-black {
+      color: black;
+    }
+  }
+  .header {
+    h5 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 12px;
+      color: $grey;
+    }
+  }
+}
+
+.div-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+.current-user {
+  @include flexbox();
+  .user-info {
+    margin-left: 4px;
+    p {
+      margin-bottom: 0;
+    }
+  }
 }

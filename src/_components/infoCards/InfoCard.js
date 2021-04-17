@@ -4,8 +4,8 @@ import LineGraph from "smooth-line-graph";
 
 const props = {
   name: "simple",
-  width: 80,
-  height: 40,
+  width: 50,
+  height: 20,
   lines: [
     {
       key: "mykey",
@@ -18,7 +18,7 @@ const props = {
         [5, 0],
         [9, 25],
         [12, 36],
-        [15, 49],
+        [15, 40],
       ],
       color: "#FFB200",
     },
@@ -28,21 +28,22 @@ const props = {
 export const InfoCard = ({ header, number, icon, graph }) => {
   return (
     <div className="exchangeCard">
-      <div className="left-col">
+      <div className="first-row">
         <div className="header">{header}</div>
+        <div>
+          <img src={icon} alt="icon" />
+        </div>
+      </div>
+      <div className="second-row">
         <div className="cardNumber">
           <h1>{number}</h1>
           <div>
             <LineGraph {...props} />
           </div>
         </div>
-      </div>
-      <div className="right-col">
-        <div>
-          <img src={icon} alt="icon" />
-        </div>
-        <div>
-          Today <IoMdArrowDropdown />
+        <div className="today">
+          <p>Today</p>
+          <IoMdArrowDropdown />
         </div>
       </div>
     </div>
